@@ -8,12 +8,8 @@ export default {
   emits: ["addTodo"],
   methods: {
     addTodo() {
-      if(this.inputMsg.trim() === ''){
-        return;
-      } else {
       this.$emit("addTodo", this.inputMsg); // 부모 컴포넌트 이벤트 호출
       this.inputMsg = ""; // 입력 데이터 초기화
-      }
     },
   },
 };
